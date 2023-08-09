@@ -22,7 +22,7 @@
         <div className={style.container}>
             <form onSubmit={onSubmit}>
 
-                {/* nombre */}
+                {/*----------------------- nombre ---------------------*/}
                 <label htmlFor="nombre">Nombre</label>
                 <input 
                     type="text" 
@@ -43,7 +43,7 @@
                 />
                 { errors.nombre && <span>{errors.nombre.message}</span> }
 
-                {/* correo */}
+                {/*----------------------- correo -----------------------*/}
                 <label htmlFor="correo">Correo</label>
                 <input 
                     type="email" 
@@ -61,7 +61,7 @@
                 />
                 { errors.email && <span>{errors.email.message}</span>}
 
-                {/* password */}
+                {/*----------------------- password -----------------------*/}
                 <label htmlFor="password">Password</label>
                 <input 
                     type="password"
@@ -78,7 +78,7 @@
                 />
                 { errors.password && <span>{errors.password.message}</span>}
 
-                {/* confirmar password */}
+                {/*----------------------- confirmar password -----------------------*/}
                 <label htmlFor="confirmarPassword">Confirmar Password</label>
                 <input 
                     type="password" 
@@ -92,7 +92,7 @@
                 />
                 { errors.confirmarPassword && <span>{errors.confirmarPassword.message}</span>}
 
-                {/* fecha de nacimiento */}
+                {/*----------------------- fecha de nacimiento -----------------------*/}
                 <label htmlFor="fechaNacimiento">Fecha de Nacimiento</label>
                 <input 
                     type="date"
@@ -111,7 +111,7 @@
                 />
                 { errors.fechaNacimiento && <span>{errors.fechaNacimiento.message}</span>}
 
-                {/* pais */}
+                {/*----------------------- pais -----------------------*/}
                 <label htmlFor="pais">Pais</label>
                 <select 
                     { ...register("pais") }
@@ -139,7 +139,7 @@
                     )
                 }
 
-                {/* file */}
+                {/*----------------------- file -----------------------*/}
                 <label htmlFor="foto">Foto de perfil</label>
                 <input 
                     type="file" 
@@ -148,7 +148,7 @@
                     }}    
                 />
 
-                {/* terminos */}
+                {/*----------------------- terminos y condiciones -----------------------*/}
                 <label htmlFor="terminos">Acepto terminos y condiciones</label>
                 <input 
                     type="checkbox" 
@@ -164,10 +164,12 @@
 
                 <button>Enviar</button>
 
-                <pre>
-                    {JSON.stringify(watch(), null, 2)}
-                </pre>
             </form>
+
+            {/*----------------------- ver el JSON con los datos -----------------------*/}
+            <pre>
+                {JSON.stringify(watch(), null, 2)}
+            </pre>
         </div>
     )
   }
