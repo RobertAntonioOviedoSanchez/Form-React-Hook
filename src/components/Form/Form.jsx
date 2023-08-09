@@ -164,12 +164,12 @@
 
                 <button>Enviar</button>
 
+                {/*----------------------- ver el JSON con los datos -----------------------*/}
+                <pre>
+                    {JSON.stringify(watch(), null, 2)}
+                </pre>
             </form>
 
-            {/*----------------------- ver el JSON con los datos -----------------------*/}
-            <pre>
-                {JSON.stringify(watch(), null, 2)}
-            </pre>
         </div>
     )
   }
